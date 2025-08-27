@@ -52,6 +52,12 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				credibility: {
+					low: 'hsl(var(--credibility-low))',
+					medium: 'hsl(var(--credibility-medium))',
+					high: 'hsl(var(--credibility-high))',
+					master: 'hsl(var(--credibility-master))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -84,11 +90,42 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'mystical-glow': {
+					'0%': {
+						boxShadow: '0 0 20px hsl(var(--primary) / 0.3)'
+					},
+					'100%': {
+						boxShadow: '0 0 40px hsl(var(--primary) / 0.6)'
+					}
+				},
+				'ritual-pulse': {
+					'0%, 100%': {
+						opacity: '1'
+					},
+					'50%': {
+						opacity: '0.7'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'mystical-glow': 'mystical-glow 3s ease-in-out infinite alternate',
+				'ritual-pulse': 'ritual-pulse 2s ease-in-out infinite'
+			},
+			backgroundImage: {
+				'gradient-mystical': 'var(--gradient-mystical)',
+				'gradient-ritual': 'var(--gradient-ritual)',
+				'gradient-shadow': 'var(--gradient-shadow)'
+			},
+			boxShadow: {
+				'mystical': 'var(--shadow-mystical)',
+				'ritual': 'var(--shadow-ritual)',
+				'deep': 'var(--shadow-deep)'
+			},
+			transitionTimingFunction: {
+				'mystical': 'var(--transition-mystical)'
 			}
 		}
 	},
